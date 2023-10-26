@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Tell the story od passwd based on the contents of the `/etc/passwd` file.
+
+while IFS=':' read -r USERNAME PASSWORD USERID GROUPID INFO home shell; do
+  echo "The user $USERNAME is part of the $GROUPID gang, lives in $home and rides $shell. $USERID's place is protected by the " \
+  "passcode $PASSWORD, more info about the user here: $INFO"
+done < "/etc/passwd"
