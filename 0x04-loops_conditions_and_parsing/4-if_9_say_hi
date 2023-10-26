@@ -2,10 +2,10 @@
 # This script is displaying "Best School" 9 times
 # It says Hi once
 
-count=1
+count=0
 while (("$count" <= 10))
 do
-  if [ "$count" = 9 ] 
+  if (("$count" == 9)) 
   then
     echo "Hi"
   else
