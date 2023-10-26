@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Cut files in current directory from - as delimeter
+
+for i in *
+do
+    echo   "$i" | cut -d '-' -f 2-
+done
