@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Define a function to remove the PID file and terminate the script
 
 
