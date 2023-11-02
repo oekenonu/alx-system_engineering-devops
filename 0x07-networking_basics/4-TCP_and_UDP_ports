@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Cammand to show listening sockets
+# Shows PID and ame of program socket belongs
+
+netstat -lp
