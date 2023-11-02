@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Using the ping Util 5 times with provided ip addr
+
+Usage="Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+
+if [ $# -ne 1 ]; then
+    echo $Usage
+    exit 1
+fi
+
+ping -c 5 $1
