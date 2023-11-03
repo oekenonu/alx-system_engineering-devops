@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 # Editing host file with sed
- 
-sed -i -e 's\127.0.0.2\127.0.0.1\' -e '2i\8.8.8.8\tfacebook.com' /etc/hosts
+
+cp /etc/hosts host.old
+sed -i -e 's|127.0.0.2|127.0.0.1|' -e '2i|8.8.8.8\tfacebook.com' host.old
+cat host.old > /etc/hosts
