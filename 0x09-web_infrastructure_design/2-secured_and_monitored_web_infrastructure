@@ -1,0 +1,45 @@
+https://imgur.com/XfsNOVM
+
+For every additional element, why you are adding it:
+Firewalls:
+Purpose: Firewalls are added to enhance security by controlling and monitoring incoming and outgoing network traffic.
+Why: They act as a barrier between your servers and potentially malicious traffic, helping prevent unauthorized access and protecting against cyber threats.
+
+SSL Certificate and HTTPS:
+Purpose: Encrypting traffic between clients and servers to ensure secure communication.
+Why: HTTPS (Hypertext Transfer Protocol Secure) encrypts data during transmission, safeguarding sensitive information such as user credentials, ensuring privacy, and preventing data tampering.
+
+Monitoring Clients and Data Collector:
+Purpose: Monitoring is crucial for tracking system performance, identifying issues, and ensuring optimal operation.
+Why: Monitoring clients collect data about server performance, errors, and other metrics. A centralized data collector (Sumo Logic) aggregates and analyzes this data, providing insights into the system's health and performance.
+What are firewalls for:
+
+Firewalls: Firewalls act as a security barrier between your internal network and external networks (like the internet). They filter and control incoming and outgoing network traffic based on an organization's previously established security policies. Firewalls help prevent unauthorized access and protect against cyber threats such as malware and hacking attempts.
+Why is the traffic served over HTTPS:
+
+HTTPS: Traffic is served over HTTPS for security reasons. HTTPS encrypts the data exchanged between a user's browser and the server, ensuring that sensitive information remains confidential during transit. This encryption is particularly crucial for protecting user credentials, personal information, and preventing data interception or tampering.
+What monitoring is used for:
+
+Monitoring: Monitoring is used to track the performance, availability, and reliability of a system. It involves collecting and analyzing data on various parameters, such as server response times, error rates, and resource usage. Monitoring helps detect issues, troubleshoot problems, and optimize system performance.
+How the monitoring tool is collecting data:
+Monitoring Tool and Data Collection: Monitoring tools like Sumo Logic collect data by deploying agents or collectors on servers. These agents continuously gather information on system metrics, logs, and events. The collected data is then sent to a centralized repository (Sumo Logic) for analysis. The tool provides real-time insights and historical data, aiding in proactive issue resolution.
+
+Explain what to do if you want to monitor your web server QPS:
+Monitoring Web Server QPS (Queries Per Second):
+Deploy monitoring tools or agents on the web server to collect performance metrics.
+Configure the monitoring tool to specifically track query rates or requests per second.
+Set up alerts to notify administrators when the QPS surpasses predefined thresholds.
+Analyze historical QPS data to identify trends and plan for scalability if needed.
+
+Issues with the Infrastructure:
+Terminating SSL at the Load Balancer:
+Issue: Terminating SSL at the load balancer level may expose unencrypted traffic within the internal network, posing a security risk.
+Solution: Implement end-to-end encryption by encrypting communication from the load balancer to the application server.
+
+Single MySQL Server for Writes:
+Issue: Having only one MySQL server capable of accepting writes is a single point of failure.
+Solution: Implement a MySQL cluster or replication for high availability and fault tolerance.
+
+Homogeneous Servers:
+Issue: Servers with identical components may lead to a homogeneous vulnerability, making the entire system susceptible to the same threats.
+Solution: Diversify components, use different software versions, and adopt a defense-in-depth strategy for improved security.

@@ -1,0 +1,35 @@
+https://imgur.com/e09StiK
+
+Server:
+A physical or virtual machine responsible for hosting the entire web infrastructure.
+
+Domain Name:
+Provides a human-readable alias for the server's IP address (8.8.8.8).
+DNS records, like the A record, map the domain to the server's IP.
+
+Web Server (Nginx):
+Listens for incoming HTTP requests on port 80.
+Handles static content and forwards dynamic requests to the application server.
+Manages SSL termination if HTTPS is implemented.
+
+Application Server:
+Runs server-side code.
+Listens on a specific port (e.g., 127.0.0.1:5000).
+Processes dynamic content requests from the web server.
+
+Database (MySQL):
+Stores and manages website data.
+Accessed by the application server for data retrieval and updates.
+
+Communication:
+Communication between components occurs over the network, typically using HTTP or HTTPS protocols.
+
+Issues with the Infrastructure:
+Single Point of Failure (SPOF):
+The entire infrastructure relies on a single server. If it fails, the website becomes inaccessible.
+
+Downtime during Maintenance:
+Deploying new code may require restarting the web server, causing temporary downtime.
+
+Scalability Concerns:
+Handling high traffic might be challenging. A single server may struggle to scale effectively

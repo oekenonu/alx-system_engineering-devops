@@ -1,0 +1,29 @@
+https://imgur.com/O6Qrb8U
+
+Server 1 and Server 2:
+Additional web servers provide redundancy and load distribution.
+Improve fault tolerance and reduce downtime.
+
+Load Balancer:
+Manages incoming traffic and distributes it among the web servers using a round-robin algorithm.
+Enhances scalability, improves performance, and prevents overloading a single server.
+Implements an Active-Active setup where both web servers actively handle incoming requests.
+
+Database (MySQL) Cluster:
+The Primary-Replica setup provides data redundancy and improves read scalability.
+Primary Node handles write operations, ensuring data consistency.
+Replica Node serves read requests, enhancing performance.
+Active-Passive setup: The Primary Node is active for writes, and the Replica is passive for reads.
+
+Issues with the Infrastructure:
+Single Points of Failure (SPOF):
+Load Balancer: If it fails, incoming traffic won't be distributed.
+
+Database: If the Primary Node fails, write operations are affected.
+
+Security Issues:
+Lack of Firewall: No mention of firewall configurations poses security risks.
+No HTTPS: Lack of HTTPS exposes data to potential interception.
+
+Monitoring:
+Absence of monitoring tools makes it challenging to identify and address performance or security issues proactively.
