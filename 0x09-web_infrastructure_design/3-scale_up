@@ -1,0 +1,28 @@
+https://imgur.com/OTJIJCp
+Components:
+Server:
+Why: Adding an additional server increases redundancy and fault tolerance. If one server fails, the other can continue to handle requests, ensuring high availability.
+
+Load-Balancer (HAproxy) Configured as a Cluster:
+Why: Load balancing distributes incoming traffic across multiple servers, preventing overloading of a single server and ensuring optimal resource utilization. Configuring HAproxy as a cluster enhances reliability and fault tolerance.
+
+Split Components (Web Server, Application Server, Database) with Their Own Server:
+Why:
+Web Server: Separating the web server allows scalability, and updates or changes to the web server won't directly impact the application or database.
+Application Server: Isolating the application server provides flexibility. Changes to the application won't affect the web server or database, and vice versa.
+
+Database: Keeping the database on a dedicated server ensures data integrity, security, and allows for independent scaling.
+Why Add an Additional Server:
+Reasoning: The additional server provides redundancy and fault tolerance. If one server experiences issues, the other can handle incoming requests, preventing downtime and maintaining service availability.
+
+Why Use Load-Balancer as a Cluster:
+Reasoning: Configuring HAproxy as a cluster ensures high availability and reliability. If one load balancer fails, the other can take over, distributing traffic evenly and preventing a single point of failure.
+
+Why Split Components:
+Web Server:
+Reasoning: Separating the web server allows for independent scaling. Changes or updates to the web server won't directly impact the application or database, providing flexibility.
+
+Application Server:
+Reasoning: Isolating the application server ensures that changes to the application won't affect other components. It allows for independent updates and modifications.
+Database:
+Reasoning: Keeping the database on its own server ensures data integrity and security. It allows for independent scaling and maintenance without affecting other components.
