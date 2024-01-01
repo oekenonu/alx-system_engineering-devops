@@ -4,13 +4,13 @@ include stdlib
 # Disable password authentication in SSH
 file_line { 'Turn off passwd auth':
   ensure => present,
-  path   => '/etc/ssh/sshd_config',
+  path   => '/etc/ssh/ssh_config',
   line   => 'PasswordAuthentication no',
 }
 
 # Configure SSH client to use the private key
 file_line { 'Declare identity file':
-  path   => '/home/vagrant/.ssh/config',
+  path   => '/etc/ssh/ssh_config',
   line   => 'IdentityFile ~/.ssh/school',
   ensure => present,
 }
