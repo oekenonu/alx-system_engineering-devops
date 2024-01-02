@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Start the apache webserver
+
+/etc/init.d/apache2 start
