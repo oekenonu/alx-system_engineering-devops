@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Install nginx and set homepage to Hello World!
+
+sudo apt update
+sudo apt install nginx -y
+sudo sed -i "s|server_name _;|server_name _;\n\n\t location /redirect_me { \n\t return 301 https://www.google.com;\n\t}|" /etc/nginx/sites-available/default
+sudo /etc/init.d/nginx reload
