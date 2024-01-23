@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Run Nginx as Nginx
+
+sudo pkill apache2
+
+while pgrep -x apache2 >/dev/null; do
+    sleep 1
+done
+
+sudo chmod 777 /etc/nginx/nginx.conf
+sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default
+sudo -u nginx nginx
