@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Exports to-do list information to CSV format."""
-import csv
+"""Exports to-do list information to JSON format."""
+import json
 import requests
 import sys
 
@@ -11,8 +11,9 @@ if __name__ == "__main__":
     username = user.get("username")
     todos = requests.get(url + "todos", params={"userId": user_id}).json()
 
-    with open("{}.csv".format(user_id), "w", newline="") as f:
-        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
-        [writer.writerow(
-            [user_id, username, t.get("completed"), t.get("title")]
-         ) for t in todos]
+    with open("{}.json".format(user_id), "w") as f:
+        json.dump({user_id: [{
+                "task": t.get("title"),
+                "completed": t.get("completed"),
+                "username": username
+            } for t in todos]}, f)
