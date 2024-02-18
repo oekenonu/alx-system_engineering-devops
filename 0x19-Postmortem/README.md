@@ -2,7 +2,7 @@
 
 **Issue Summary:**<br>
 Outage of Web Server.<br>
-Duration: The outage occurred from *10:00 AM to 11:30 AM (UTC) on February 14, 2024*.<br>
+:timer_clock: Duration: The outage occurred from *10:00 AM to 11:30 AM (UTC) on February 14, 2024*.<br>
 Impact: The outage affected the main web application, resulting in a complete service disruption. Users experienced error messages and were unable to access the platform. Approximately 80% of users were affected.<br>
 Root Cause: The outage was caused by a misconfiguration in the load balancer settings.<br>
 
