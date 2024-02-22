@@ -2,19 +2,19 @@
 
 **Issue Summary:**<br>
 Outage of Web Server.<br>
-Duration: The outage occurred from *10:00 AM to 11:30 AM (UTC) on February 14, 2024*.<br>
-Impact: The outage affected the main web application, resulting in a complete service disruption. Users experienced error messages and were unable to access the platform. Approximately 80% of users were affected.<br>
-Root Cause: The outage was caused by a misconfiguration in the load balancer settings.<br>
+:timer_clock: Duration: The outage occurred from *10:00 AM to 11:30 AM (UTC) on February 14, 2024*.<br>
+:rotating_light: Impact: The outage affected the main web application, resulting in a complete service disruption. Users experienced error messages and were unable to access the platform. Approximately 80% of users were affected.<br>
+:anchor: Root Cause: The outage was caused by a misconfiguration in the load balancer settings.<br>
 
 **Timeline:**<br>
-- 10:00 AM: Issue detected through monitoring alerts indicating a spike in error rates.
-- Engineers investigated the issue, initially suspecting a database failure.
-- After ruling out database issues, attention turned to the load balancer configuration.
-- The incident was escalated to the infrastructure team for further investigation.
-- 11:30 AM: The misconfiguration in the load balancer settings was identified and corrected, resolving the issue.
+- :hourglass: 10:00 AM: Issue detected through monitoring alerts indicating a spike in error rates.
+- :fountain: Engineers investigated the issue, initially suspecting a database failure.
+- :monocle_face: After ruling out database issues, attention turned to the load balancer configuration.
+- :nerd_face: The incident was escalated to the infrastructure team for further investigation.
+- :hourglass: 11:30 AM: The misconfiguration in the load balancer settings was identified and corrected, resolving the issue.
 
 **Root Cause and Resolution:**<br>
-The root cause of the outage was a misconfiguration in the load balancer settings. The load balancer was not distributing traffic evenly across the backend servers, causing some servers to become overloaded while others remained underutilized. This imbalance led to degraded performance and ultimately, a complete service disruption.
+:cartwheeling: The root cause of the outage was a misconfiguration in the load balancer settings. The load balancer was not distributing traffic evenly across the backend servers, causing some servers to become overloaded while others remained underutilized. This imbalance led to degraded performance and ultimately, a complete service disruption.
 To resolve the issue, engineers corrected the load balancer configuration to ensure that traffic was distributed evenly across all backend servers. Additionally, monitoring alerts were enhanced to provide early detection of similar misconfigurations in the future.
 
 **Corrective and Preventative Measures:**<br>
